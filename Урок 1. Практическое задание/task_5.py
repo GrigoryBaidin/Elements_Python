@@ -18,3 +18,15 @@
 Введите численность сотрудников фирмы: 10
 Прибыль фирмы в расчете на одного сотрудника = 50.0
 """
+proceeds = int(input('Введите сумму выручки>>>'))
+costs = int(input('Введите сумму издержек>>>'))
+if proceeds > costs:
+    profit = proceeds - costs
+    print('Вы работаете с прибылью', round(profit, 2))
+    profitability = profit / proceeds
+    print('Ваша рентабельность', round(profitability, 2))
+    staff = int(input('Введите численность сотрудников>>>'))
+    x = profit / staff
+    print('Прибыль на одного сотрудника', round(x, 2))
+else:
+    print('Вы работаете в убыток')
