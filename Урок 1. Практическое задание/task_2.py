@@ -9,3 +9,8 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+time_sek = float(input('Введите количество секунд >>>'))
+hour = float(time_sek // 3600)
+minutes = float(time_sek % 3600) // 60
+sek = float(time_sek - ((hour * 3600) + (minutes * 60)))
+print(f"{hour} : {minutes} : {sek}")
