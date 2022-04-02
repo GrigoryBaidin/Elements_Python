@@ -8,3 +8,9 @@
 Введите число n: 3
 n + nn + nnn = 369
 """
+n = (input('Введите число >>>'))
+n1 = (n + n)
+n2 = (n + n + n)
+summa = int(n) + int(n1) + int(n2)
+print(f"{summa}")
+
