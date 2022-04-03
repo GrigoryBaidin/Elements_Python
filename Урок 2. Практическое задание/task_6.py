@@ -25,3 +25,31 @@
 “ед”: [“шт.”]
 }
 """
+my_list = []
+my_lists = ()
+my_list1 = {}
+y = ()
+spisok = ['название', 'цена', 'количество', 'ед']
+korte1 = []
+korte2 = []
+korte3 = []
+korte4 = []
+while y != 'y':
+    i = len(my_list) + 1
+    naz = input(spisok[0])
+    cena = input(spisok[1])
+    kolich = input(spisok[2])
+    edin = input(spisok[3])
+    korte = {spisok[0]: (naz), spisok[1]: (cena), spisok[2]: (kolich), spisok[3]: (edin)}
+    korte1.append(korte.get(spisok[0]))
+    korte2.append(korte.get(spisok[1]))
+    korte3.append(korte.get(spisok[2]))
+    korte4.append(korte.get(spisok[3]))
+    my_lists = (i, (korte))
+    my_list.append(my_lists)
+    i += 1
+    y = input('Ввод данных закончен Y/n')
+analitika = {spisok[0]: korte1, spisok[1]: korte2, spisok[2]: korte3, spisok[3]: korte4}
+print(*my_list, sep='\n')
+for k, v in analitika.items():
+    print(k, ':', v)
