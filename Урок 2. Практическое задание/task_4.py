@@ -14,3 +14,12 @@
 1. раз
 2. перерефриж
 """
+lists = input('Введите данные через пробел>>>')
+lists = lists.split()
+for i in lists:
+    x = lists.index(i) + 1
+    if len(i) > 10:
+        print(f'{x}.{i[:10]}')
+        continue
+    print(f'{x}.{i}')
+
