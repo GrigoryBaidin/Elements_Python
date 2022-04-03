@@ -15,3 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+lists = (3, 5.5, 'John', 'Kate', 27, False, 'Ivan')
+for i in lists:
+    print(i, type(i))
