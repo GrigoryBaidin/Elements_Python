@@ -5,3 +5,14 @@
 1) используя функцию sort()
 2) без функции sort()
 """
+def my_func(a, b, c):
+    my_list = (a, b, c)
+    if b > a < c:
+        return b + c
+    elif a > b < c:
+        return a + c
+    else:
+        return a + b
+
+
+print(my_func(100, 5, 45))
