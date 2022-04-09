@@ -8,3 +8,21 @@
 Сделать вывод исходной строки, но каждое слово должно начинаться с заглавной буквы.
 Необходимо использовать написанную ранее функцию int_func().
 """
+
+
+def int_func(string):
+    return string.capitalize()
+
+
+print(int_func('text'))
+
+
+def title_string(string):
+    lists_title = []
+    lists = string.split()
+    for i in lists:
+        lists_title.append(int_func(i))
+    print(*lists_title)
+
+
+title_string('list comprehensions')
