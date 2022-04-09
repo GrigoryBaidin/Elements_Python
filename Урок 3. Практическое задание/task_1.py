@@ -17,6 +17,8 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
 def my_func():
     try:
         x = int(input('Введите x'))
@@ -26,5 +28,6 @@ def my_func():
         print('Вы ввели y=0')
         return 'Деление на ноль запрещено'
     return z
-print(my_func())
 
+
+print(my_func())
