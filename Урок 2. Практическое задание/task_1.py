@@ -15,6 +15,6 @@
 <class 'bool'>
 <class 'NoneType'>
 """
-lists = (3, 5.5, 'John', 'Kate', 27, False, 'Ivan')
-for i in lists:
+my_list= [3, 5.5, 'John', 'Kate', 27, False, 'Ivan',None,25]
+for i in my_list:
     print(i, type(i))

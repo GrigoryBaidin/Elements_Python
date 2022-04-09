@@ -16,7 +16,7 @@
 name = input("Введите  Имя >>>")
 age = int(input("Ваш возраст >>>"))
 anniversary = 100 - age
-print("Здравствуйте", name, ",""Вам", age)
+print(f"Здравствуйте, {name.capitalize()}, {age}")
 if age <= 100:
     print(f"Через {anniversary}лет Вам исполнится 100 лет")
 
