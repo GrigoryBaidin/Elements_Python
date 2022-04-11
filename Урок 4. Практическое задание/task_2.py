@@ -7,4 +7,6 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
-def
+def larger(my_list=None,):
+    m
+print(larger())
