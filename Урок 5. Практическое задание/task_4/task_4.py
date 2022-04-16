@@ -7,3 +7,12 @@
 Иванов 23543.12
 Петров 13749.32
 """
+import json
+
+with open("lesson_4.json", encoding='utf-8') as my_file:
+    my_dict = json.load(my_file)
+    print(f"Работники зарабатывающиее менее 20000")
+    for keys, values in my_dict.items():
+        if values < 20000:
+            print(keys)
+    print(f"Средняя зарплата работников = {sum(my_dict.values()) / len(my_dict)}")
