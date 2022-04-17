@@ -7,6 +7,11 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
-def larger(my_list=None,):
-    m
-print(larger())
+prim_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+res_list = []
+for i in range(1, len(prim_list)):
+    if prim_list[i] > prim_list[i - 1]:
+        res_list.append(prim_list[i])
+print(res_list)
+new_res_list = [prim_list[i] for i in range(1, len(prim_list)) if prim_list[i] > prim_list[i - 1]]
+print(new_res_list)

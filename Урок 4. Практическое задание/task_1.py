@@ -8,12 +8,16 @@
 """
 import sys
 
-f_name, name_worker, salary, hours_worker = sys.argv
-print(f_name)
+wage_h, name, rate_v, hours_v = sys.argv
+print(wage_h)
 
 
-def salary_calc(salary, hours_worker):
-    print(f"Работник {name_worker} заработал {(int(salary) * int(hours_worker)) * 1.3}")
+def calc_salary(rate, hours):
+    try:
+        print(f'Работник {name} зароботал {int(rate) * int(hours) * 1.3}')
+
+    except ValueError:
+        print('Данные введены не корректно')
 
 
-salary_calc(salary, hours_worker)
+calc_salary(rate_v, hours_v)

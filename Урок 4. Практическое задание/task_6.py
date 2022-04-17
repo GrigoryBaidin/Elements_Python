@@ -12,3 +12,22 @@
 Во втором также необходимо предусмотреть условие,
 при котором повторение элементов списка будет прекращено.
 """
+from itertools import count, cycle
+
+list_int = []
+a = int(input("Введите первое число последовательности>>>"))
+b = int(input("Введите последнее число последовательности>>>"))
+for i in count(a):
+    if i > b:
+        break
+    print(i)
+    list_int.append(i)
+print(list_int)
+#
+count = 0
+for i in cycle(list_int):
+    if count >= len(list_int):
+        break
+    print(i)
+    count += 1
+print(list_int)
