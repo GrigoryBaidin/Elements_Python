@@ -20,3 +20,79 @@ speed, color, name, is_police (булево).
 Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 """
+
+
+class Car:
+    # atributes
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        return f'{self.name} started'
+
+    def stop(self):
+        return f'{self.name} stopped'
+
+    def show_speed(self):
+        return f'Current speed {self.name}  {self.speed}'
+
+
+class TownCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        print(f'Current speed of town car {self.name}  {self.speed}')
+
+        if self.speed > 60:
+            return f'Speed of {self.name} is higher '
+        else:
+            return f'Speed of {self.name} is normal '
+
+
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def sport(self):
+        if self.is_police:
+            return f'Car {self.name} is sport car'
+        else:
+            return f'Car {self.name} no sport car'
+
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        print(f'Current speed of work car {self.name}  {self.speed}')
+
+        if self.speed > 40:
+            return f'Speed of {self.name} is higher '
+
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def police(self):
+        if self.is_police:
+            return f'{self.name} is from police '
+        else:
+            return f'{self.name} is not from police '
+
+
+mersedes = SportCar(100, 'Red', 'Mersedes', False)
+kia = TownCar(30, 'White', 'Kia', False)
+fiat = WorkCar(70, 'Rose', 'Fiat', True)
+audi = PoliceCar(110, 'Blue', 'Audi', True)
+print(f'Is {mersedes.name} a police car? {mersedes.is_police}')
+print(f'Is {fiat.name}  a police car? {fiat.is_police}')
+print(mersedes.show_speed())
+print(kia.show_speed())
+print(audi.police())
+print(audi.show_speed())
