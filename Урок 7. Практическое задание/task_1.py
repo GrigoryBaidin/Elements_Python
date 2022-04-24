@@ -57,10 +57,10 @@ class Matrix:
         return Matrix('\n'.join(map(str, new_sum)))
 
 
-Matr_Obj = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
-print(Matr_Obj)
+matr_obj = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+print(matr_obj)
 print()
-Matr_Obj_1 = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
-print(Matr_Obj_1)
+matr_obj1 = Matrix([1, 2, 3], [4, 5, 6], [7, 8, 9])
+print(matr_obj1)
 print()
-print(f'Sum Matrix:\n{Matr_Obj + Matr_Obj_1}')
+print(f'Sum Matrix:\n{matr_obj + matr_obj1}')
